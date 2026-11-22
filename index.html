@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>To Someone</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="envelope-wrapper" id="envelope">
+        <div class="flap"></div>
+        <div class="pocket"></div>
+        <div class="letter">
+            <p>To Someone Special</p>
+            <p>Happy Birthdayyyyyyyyyyyyyy🎂🕯️🎉</strong></p>
+            <p>since today is your birthday , i want to tell you thatttt</p>
+            <p>私はあなたが好きです</p>
+            <p>HAHAHAHA you dont understnd nvm</p>
+            <p>date ?</p>
+            <button id="yesBtn">YES 🌯</button>
+            <button id="noBtn">NO THANKS</button>
+        </div>
+    </div>
+
+    <button id="openBtn">Open your card 🎂</button>
+    <audio id="bgMusic" src="love.mp3" loop></audio>
+
+    <script>
+        const envelope = document.getElementById('envelope');
+const openBtn = document.getElementById('openBtn');
+const yesBtn = document.getElementById('yesBtn');
+const noBtn = document.getElementById('noBtn');
+const bgMusic = document.getElementById('bgMusic');
+
+openBtn.addEventListener('click', () => {
+    envelope.classList.toggle('open');
+
+    if (envelope.classList.contains('open')) {
+        openBtn.textContent = 'Close' ;
+        bgMusic.play();
+        ic.play();
+    } else {
+        openBtn.textContent = 'Open Your Card 🎂';
+    }
+});
+
+yesBtn.addEventListener('click' , () => {
+    alert(' jk Happy Birthday to YOUU!  🎂❤️');
+});
+
+noBtn.addEventListener('mouseover' , () => {
+    const randomX = Math.floor(Math.random() * 140) - 70;
+    const randomY = Math.floor(Math.random() * 80) - 40;
+    noBtn.style.transform = "translate(" + randomX + "px," + randomY + "px)";
+});
+
+    </script>
+</body>
+</html>
+
+
+
